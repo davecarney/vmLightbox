@@ -1,0 +1,166 @@
+/*==========================================*/
+/*========== VM-LIGHTBOX STYLES ============*/
+/*==========================================*/
+#vm-lightbox {
+	position: fixed;
+	box-sizing: border-box;
+  	display: -ms-flexbox;
+  	display: -webkit-box;
+	display: flex;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 60px 90px;
+	background-color: rgba(0,0,0,0.7);
+}
+.vm-lightbox-container {
+	box-sizing: border-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+.vm-lightbox-img-container {
+	position: relative;
+	max-width: 100%;
+}
+.vm-lightbox-img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.vm-lightbox-close {
+	position: absolute;
+	display: block;
+	height: 26px;
+	width: 24px;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+	z-index: 10000;
+}
+.vm-lightbox-close:hover .vm-close-icon line {
+	stroke: white !important;
+}
+.vm-lightbox-close span.sr-only {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.vm-lightbox-info {
+	width: 100%;
+}
+.vm-lightbox-nav {
+	position: absolute;
+	display: inline-block;
+	height: 64px;
+	width: 35px;
+	top: 50%;
+	margin-top: -32px;
+}
+.vm-lightbox-nav:hover .vm-chevron-icon polyline {
+	stroke: white !important;
+}
+.vm-chevron-right .vm-chevron-icon {
+	transform: rotate(180deg);
+}
+.vm-lightbox-nav.prev-nav {
+	left: 30px;
+}
+.vm-lightbox-nav.next-nav {
+	right: 30px;
+}
+.vm-lightbox-image-count {
+	padding: 1em 0 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+.vm-lightbox-caption {
+	text-align: left;
+	padding-top: 0.5em;
+	margin-bottom: 0;
+	width: 100%;
+}
+.vm-loading {
+	position: fixed;
+	z-index: 99999;
+	pointer-events: none;
+	box-sizing: border-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.vm-spinner {
+	box-sizing: border-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-align: end;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	-webkit-animation: vm-loader-rotate 1.5s linear infinite;
+	animation: vm-loader-rotate 1.5s linear infinite;
+	width: 50px;
+	margin: auto;
+}
+@-webkit-keyframes vm-loader-rotate {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(-360deg); }
+}
+@keyframes vm-loader-rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(-360deg); }
+}
+@media all and (max-width:767px) {
+	#vm-lightbox {
+		padding: 60px 30px;
+	}
+	.vm-lightbox-img-container {
+		position: static;
+	}
+	.vm-lightbox-close {
+		top: 30px;
+		right: 30px;
+	}
+	.vm-lightbox-nav {
+		padding-top: 10px;
+		padding-left: 5px;
+	}
+	.vm-chevron-icon {
+		width: 20px;
+	}
+	.vm-lightbox-nav.prev-nav {
+		left: 45px;
+	}
+	.vm-lightbox-nav.next-nav {
+		right: 45px;
+	}
+}
