@@ -1,11 +1,11 @@
 /*
-* vmLightbox() 1.3.3
+* vmLightbox() 1.3.4
 *
 * Copyright 2017
 *
 * By Dave Carney, https://vehiclemedia.com/
 * Minimal image lightbox plugin
-* works in all modern browsers including IE 10+
+* works in all modern browsers including IE 11+
 * 
 * 	activate with:
 * 		$(document).vmLightbox();
@@ -30,9 +30,9 @@
 	$.fn.vmLightbox = function(options) {
 
 		// icons
-		var close_icon = '<svg id="Layer_1" class="vm-close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.41 31.41" style="background:rgba(255,255,255,0.2);border-radius:50%;padding:3px;"><line x1="0.71" y1="0.71" x2="0.71" y2="0.71" style="fill:none;stroke:#000;stroke-miterlimit:10"/><line x1="0.71" y1="0.71" x2="30.71" y2="30.71" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><line x1="30.71" y1="0.71" x2="0.71" y2="30.71" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/></svg>';
-		var chevron_icon = '<svg id="Layer_1" class="vm-chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.62 66.41"><polyline points="33.91 0.71 1.41 33.21 33.91 65.71" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/></svg>';
-		var spinner = '<svg id="Layer_1" class="vm-spinner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28.26"><circle cx="3.93" cy="14.88" r="3.93" style="fill:#fff"/><circle cx="7.39" cy="7.41" r="3.53" transform="translate(-3.07 6.52) rotate(-45)" style="fill:#fff;opacity:0.875"/><circle cx="15.73" cy="3.08" r="3.08" style="fill:#fff;opacity:0.75"/><circle cx="24.07" cy="7.41" r="2.64" transform="translate(1.81 18.32) rotate(-45)" style="fill:#fff;opacity:0.625"/><circle cx="27.53" cy="14.88" r="2.47" style="fill:#fff;opacity:0.5"/><circle cx="24.07" cy="24.09" r="1.98" transform="translate(-9.98 23.21) rotate(-45)" style="fill:#fff;opacity:0.375"/><circle cx="15.73" cy="26.67" r="1.58" style="fill:#fff;opacity:0.25"/><circle cx="7.39" cy="24.09" r="1.32" transform="translate(-14.87 11.41) rotate(-45)" style="fill:#fff;opacity:0.125"/></svg>';
+		var close_icon = '<svg id="vm-close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.41 31.41"><line x1="0.71" y1="0.71" x2="0.71" y2="0.71" style="stroke-miterlimit:10"/><line x1="0.71" y1="0.71" x2="30.71" y2="30.71" style="stroke-miterlimit:10;"/><line x1="30.71" y1="0.71" x2="0.71" y2="30.71" style="stroke-miterlimit:10;"/></svg>';
+		var chevron_icon = '<svg id="vm-chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.62 66.41"><polyline points="33.91 0.71 1.41 33.21 33.91 65.71" style="stroke-miterlimit:10;"/></svg>';
+		var spinner = '<svg id="vm-spinner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28.26"><circle cx="3.93" cy="14.88" r="3.93" style="fill:#fff"/><circle cx="7.39" cy="7.41" r="3.53" transform="translate(-3.07 6.52) rotate(-45)" style="fill:#fff;opacity:0.875"/><circle cx="15.73" cy="3.08" r="3.08" style="fill:#fff;opacity:0.75"/><circle cx="24.07" cy="7.41" r="2.64" transform="translate(1.81 18.32) rotate(-45)" style="fill:#fff;opacity:0.625"/><circle cx="27.53" cy="14.88" r="2.47" style="fill:#fff;opacity:0.5"/><circle cx="24.07" cy="24.09" r="1.98" transform="translate(-9.98 23.21) rotate(-45)" style="fill:#fff;opacity:0.375"/><circle cx="15.73" cy="26.67" r="1.58" style="fill:#fff;opacity:0.25"/><circle cx="7.39" cy="24.09" r="1.32" transform="translate(-14.87 11.41) rotate(-45)" style="fill:#fff;opacity:0.125"/></svg>';
 
 		// set defaults
 		options = $.extend({

@@ -53,8 +53,15 @@
 	cursor: pointer;
 	z-index: 10000;
 }
-.vm-lightbox-close:hover .vm-close-icon line {
-	stroke: white !important;
+#vm-close-icon {
+	stroke: black;
+	stroke-width: 2px;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 50%;
+	padding: 3px;
+}
+.vm-lightbox-close:hover #vm-close-icon {
+	stroke: white;
 }
 .vm-lightbox-close span.sr-only {
 	position: absolute;
@@ -77,10 +84,20 @@
 	top: 50%;
 	margin-top: -32px;
 }
-.vm-lightbox-nav:hover .vm-chevron-icon polyline {
-	stroke: white !important;
+#vm-chevron-icon {
+	fill: none;
+	stroke: black;
+	stroke-width: 2px;
 }
-.vm-chevron-right .vm-chevron-icon {
+#vm-chevron-icon:hover {
+	stroke: white;
+}
+#vm-chevron-icon polyline {
+	fill: inherit;
+	stroke: inherit;
+	stroke-width: inherit;
+}
+.vm-chevron-right #vm-chevron-icon {
 	transform: rotate(180deg);
 }
 .vm-lightbox-nav.prev-nav {
@@ -117,7 +134,7 @@
 	right: 0;
 	bottom: 0;
 }
-.vm-spinner {
+#vm-spinner {
 	box-sizing: border-box;
 	display: -ms-flexbox;
 	display: -webkit-box;
@@ -154,7 +171,7 @@
 		padding-top: 10px;
 		padding-left: 5px;
 	}
-	.vm-chevron-icon {
+	#vm-chevron-icon {
 		width: 20px;
 	}
 	.vm-lightbox-nav.prev-nav {
