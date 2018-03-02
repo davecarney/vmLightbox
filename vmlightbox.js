@@ -17,7 +17,7 @@
 * 		});
 *
 * 	watches for:
-* 		data-target="vm-lightbox" 	(default: add this data-attribute to images if you don't specify a selector)
+* 		data-target="vm-lightbox" 	(default: add this data-attribute to image links if you don't specify a selector)
 * 		data-caption="some caption here"
 * 		data-group="group-these-images-together"
 *
