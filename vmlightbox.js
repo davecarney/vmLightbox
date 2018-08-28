@@ -1,5 +1,5 @@
 /*
-* vmLightbox() 1.3.4
+* vmLightbox() 1.3.5
 *
 * Copyright 2017
 *
@@ -130,8 +130,11 @@
 		// set image height
 		function set_image_height() {
 
+			// check for padding on inner container
+			var inner_container_padding = $('.vm-lightbox-container').outerHeight() - $('.vm-lightbox-container').height();
+
 			// container height minus all other elements equals maximum allowable image height
-			var hold_image_height = $('#vm-lightbox').height() - $('.vm-lightbox-info').outerHeight();
+			var hold_image_height = $('#vm-lightbox').height() - $('.vm-lightbox-info').outerHeight() - inner_container_padding;
 			function this_image_height() {
 				$('.vm-lightbox-img').css('max-height', hold_image_height);
 			}
@@ -318,4 +321,6 @@
 
 	};
 }( jQuery ));
+
+$(document).ready(function() { $(document).vmLightbox(); });
 
