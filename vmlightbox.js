@@ -147,6 +147,7 @@
 			var this_img = new Image();
 				this_img.onload = function() {
 					$('.vm-loading').fadeOut(250, function() {
+						$('.vm-lightbox-container').css('background', '');
 						$('.vm-lightbox-img').animate({
 							opacity: 1
 						}, 400);
@@ -245,7 +246,7 @@
 
 				// Create markup for lightbox window
 				var lightbox = '<div id="vm-lightbox" style="opacity: 0;">' +
-									'<div class="vm-lightbox-container">' +
+									'<div class="vm-lightbox-container" style="background: none;">' +
 										'<div class="vm-lightbox-img-container">' +
 											'<a class="vm-lightbox-close" title="Close">' + options.close_text + '</a>' +
 											'<img class="vm-lightbox-img" src="" style="opacity: 0;">' +
@@ -277,6 +278,7 @@
 		$(document).on('click touchend onpointerup', 'a.vm-lightbox-nav', function(e) {
 
 			e.preventDefault();
+			$('.vm-lightbox-container').css('background', 'none');
 			$('.vm-lightbox-img').css('opacity', '0');
 			$('.vm-loading').show();
 
@@ -321,6 +323,4 @@
 
 	};
 }( jQuery ));
-
-$(document).ready(function() { $(document).vmLightbox(); });
 
