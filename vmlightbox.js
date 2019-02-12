@@ -16,6 +16,11 @@
 *			item_count: true
 * 		});
 *
+*	Example markup:
+*	<a href="PATH_TO_IMAGE" data-target="vm-lightbox" data-caption="SOME CAPTION HERE" data-group="EXAMPLE_GROUP_NAME">
+*		<img src="PATH_TO_IMAGE_THUMB" alt="">
+*	</a>
+*
 * 	watches for:
 * 		data-target="vm-lightbox" 	(default: add this data-attribute to image links if you don't specify a selector)
 * 		data-caption="some caption here"
