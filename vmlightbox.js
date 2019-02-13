@@ -48,7 +48,8 @@
 					next_link_text: 	'<span class="vm-chevron-right">' + chevron_icon + '</span>',
 					single: 			false, 		// overide to true to prevent grouping
 					item_count: 		false, 		// overide to true to display image count
-					close_text: 		close_icon + '<span class="sr-only">Close Lightbox</span>' // overide to change the 'X'
+					close_text: 		close_icon + '<span class="sr-only">Close Lightbox</span>', // overide to change the 'X'
+					spinner: 			spinner		// overide to change the spinner
 
 		}, options );
 
@@ -83,7 +84,7 @@
 
 		// build loading element
 		function img_loading() {
-			return '<div class="vm-loading">' + spinner + '</div>';
+			return '<div class="vm-loading">' + options.spinner + '</div>';
 		}
 
 		// build image count
